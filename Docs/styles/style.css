@@ -1,68 +1,179 @@
 /* Basic CSS Global Ruleset */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html, body {
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #fafafa;
-    color: #222;
-    line-height: 1.6;
+html,
+body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fafafa;
+  color: #222;
+  line-height: 1.6;
 }
 
 a {
-    color: #0077cc;
-    text-decoration: none;
-    transition: color 0.2s;
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-a:hover, a:focus {
-    color: #005fa3;
-    text-decoration: underline;
+a:hover,
+a:focus {
+  color: #005fa3;
+  text-decoration: underline;
 }
 
-ul, ol {
-    padding-left: 2rem;
+ul,
+ol {
+  padding-left: 2rem;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-button, input, textarea, select {
-    font: inherit;
-    outline: none;
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  outline: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    margin-bottom: 0.5em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin-bottom: 0.5em;
 }
 
 /* main css */
 
 body {
-    background-color: #d5d8da;
+  background-color: #d5d8da;
 }
 
 .hero {
-    display: flex;
-    align-content: center;
+  display: flex;
+  align-content: center;
 }
 
 .hero_txt {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 7.5vw, 7rem);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(1.5);
+  width: auto;
+  letter-spacing: clamp(-2px, -0.3vw, -8px);
+  white-space: nowrap;
 }
 
+nav {
+  width: 100%;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw 0 0 2vw;
+}
 
+.favicon {
+  font-family: "Cormorant Garamond", serif;
+  display: flex;
+  align-items: center;
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-weight: 900;
+  color: rgb(215, 58, 1);
+  line-height: 1.1;
+  width: auto;
+}
 
+.favicon img {
+  height: clamp(32px, 6vw, 64px);
+  padding-right: clamp(8px, 1vw, 16px);
+}
+
+nav .nav_links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: clamp(12px, 2vw, 32px);
+}
+
+.nav_links ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+}
+
+.nav_links ul li {
+  margin: 0 clamp(4px, 0.5vw, 8px);
+  border: #666666 solid 0.1em;
+  border-radius: 100%;
+  padding: clamp(4px, 0.5vw, 8px);
+  width: clamp(32px, 3vw, 48px);
+  height: clamp(32px, 3vw, 48px);
+}
+
+.nav_links ul li img {
+  height: clamp(16px, 2vw, 32px);
+}
+
+/* Center only search and profil icons in their circles, not cart */
+.nav_links ul li.search,
+.nav_links ul li.profil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(4px, 0.5vw, 8px);
+  width: clamp(32px, 3vw, 48px);
+  height: clamp(32px, 3vw, 48px);
+}
+
+.nav_links ul li.search img,
+.nav_links ul li.profil img {
+  display: block;
+  margin: 0 auto;
+  height: clamp(16px, 2vw, 32px);
+}
+
+.nav_links .cart {
+  width: clamp(56px, 7vw, 112px);
+  height: clamp(28px, 3.4vw, 48px);
+  background: linear-gradient(135deg, #ff5100, #f19c00);
+  border-radius: 999px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+}
+
+.cart img {
+  margin-left: clamp(2px, 0.3vw, 6px);
+}
+
+.cart .cart_nb {
+  background-color: white;
+  padding: clamp(4px, 1.2vw, 15px);
+  border-radius: 50%;
+  height: clamp(12px, 1vw, 20px);
+  width: clamp(12px, 1vw, 20px);
+  font-size: clamp(7px, 1vw, 18px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: clamp(2px, 0.3vw, 6px);
+}
 

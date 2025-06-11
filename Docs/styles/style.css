@@ -72,20 +72,21 @@ body {
   font-weight: 300;
   font-size: clamp(2rem, 7.5vw, 7rem);
   position: absolute;
-  top: 50%;
+  top: 25vw;
   left: 50%;
   transform: translate(-50%, -50%) scaleY(1.5);
   width: auto;
   letter-spacing: clamp(-2px, -0.3vw, -8px);
   white-space: nowrap;
+  z-index: 1;
 }
 
 nav {
   width: 100%;
   display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2vw 0 0 2vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw 0 0 12vw;
 }
 
 .favicon {
@@ -177,3 +178,113 @@ nav .nav_links {
   margin-right: clamp(2px, 0.3vw, 6px);
 }
 
+/*  leafs */
+
+.leaf1 img {
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  transform: rotate(-250deg);
+}
+
+.leaf2 img {
+  position: fixed;
+  top: 50%;
+  left: -10%;
+  transform: rotate(-250deg);
+}
+
+.leaf3 img {
+  position: fixed;
+  height: 48em;
+  top: 30%;
+  right: -8%;
+  transform: rotate(-70deg);
+}
+
+/* Responsive leaf images */
+.leaf1 img,
+.leaf2 img,
+.leaf3 img {
+  width: 18vw;
+  min-width: 60px;
+  max-width: 500px;
+  height: auto;
+}
+
+/* pot */
+
+.teapot {
+  position: absolute;
+  left: 52%;
+  top: -15vw;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.teapot img {
+  width: 25vw;
+  min-width: 120px;
+  max-width: 300px;
+  height: auto;
+}
+
+/* tea bowl */
+
+.bowl {
+  position: absolute;
+  left: 52%;
+  top: 16vw;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.bowl img {
+  position: static;
+  width: 35vw;
+  min-width: 180px;
+  max-width: 420px;
+  height: auto;
+}
+
+.bowlleaf img {
+  position: absolute;
+  right: 50%;
+  height: auto;
+  z-index: -1;
+}
+
+.bowlleaf .leaf1 {
+  width: 10vw;
+  min-width: 100px;
+  max-width: 450px;
+  transform: rotate(-90deg);
+  bottom: 10%;
+  right: 50%;
+}
+
+.bowlleaf .leaf2 {
+  width: 10vw;
+  min-width: 100px;
+  max-width: 420px;
+  transform: rotate(-90deg);
+  bottom: 2%;
+  right: 50%;
+}
+
+/* idk part */
+
+.idk {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.idk img {
+  width: 10em;
+  height: auto;
+}

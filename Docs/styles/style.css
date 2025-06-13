@@ -367,3 +367,17 @@ nav .nav_links {
     bottom: 1.5em;
   }
 }
+
+/* fog */
+
+.fog_1 {
+  position: absolute;
+  top: 10vw;
+  left: 15vw;
+}
+
+.fog_2 {
+  position: absolute;
+  top: 20vw;
+  left: 30vw;
+}

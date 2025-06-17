@@ -370,6 +370,15 @@ nav .nav_links {
 
 /* fog */
 
+.fog_1,
+.fog_2,
+.fog_3 {
+  width: 28vw;
+  min-width: 60px;
+  max-width: 1000px;
+  height: auto;
+}
+
 .fog_1 {
   position: absolute;
   top: 10vw;
@@ -379,5 +388,11 @@ nav .nav_links {
 .fog_2 {
   position: absolute;
   top: 20vw;
-  left: 30vw;
+  right: 10vw;
+}
+
+.fog_3 {
+  position: absolute;
+  top: 13w;
+  left: 32vw;
 }

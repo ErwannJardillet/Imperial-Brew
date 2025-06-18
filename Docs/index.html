@@ -1,107 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Web Application</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Mini E-commerce</title>
+    <link rel="stylesheet" href="/Docs/styles/style.css" />
   </head>
   <body>
-    <header>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="logo">
+        <img src="/Docs/assets/img/fav_icon.png" alt="" />
+        <p>
+          Imperial <br />
+          brew
+        </p>
+      </div>
       <nav>
-        <div class="favicon">
-          <img src="/Docs/assets/img/fav_icon.png" alt="fav_icon" />
-          <p>
-            Imperial <br />
-            Brew
-          </p>
-        </div>
-        <div class="nav_links">
-          <ul>
-            <li class="search">
-              <img
-                src="/Docs/assets/img/search_24dp_666666_FILL0_wght400_GRAD200_opsz24.svg"
-                alt=""
-              />
-            </li>
-            <li class="profil">
-              <img
-                src="/Docs/assets/img/person_24dp_666666_FILL0_wght400_GRAD200_opsz24.svg"
-                alt=""
-              />
-            </li>
-            <li class="cart">
-              <img
-                src="/Docs/assets/img/shopping_cart_24dp_E3E3E3_FILL0_wght400_GRAD200_opsz24.svg"
-                alt=""
-              />
-              <div class="cart_nb"><p>0</p></div>
-            </li>
-          </ul>
-        </div>
+        <ul class="nav-links">
+          <li class="search">
+            <img
+              src="/Docs/assets/img/search_24dp_666666_FILL0_wght400_GRAD200_opsz24.svg"
+              alt=""
+            />
+          </li>
+          <li class="person">
+            <img
+              src="/Docs/assets/img/person_24dp_666666_FILL0_wght400_GRAD200_opsz24.svg"
+              alt=""
+            />
+          </li>
+          <li class="cart"> <img src="/Docs/assets/img/shopping_cart_24dp_E3E3E3_FILL0_wght400_GRAD200_opsz24.svg" alt=""> <p>0</p> </li>
+        </ul>
       </nav>
-      <div class="hero">
-        <div class="hero_txt">
-          <h1>Organic Essence</h1>
-        </div>
-        <div class="component">
-          <div class="leaf1">
-            <img src="/Docs/assets/img/leaf_1.png" alt="" />
-          </div>
-          <div class="leaf2">
-            <img src="/Docs/assets/img/leaf_2.png" alt="" />
-          </div>
-          <div class="leaf3">
-            <img src="/Docs/assets/img/leaf_3.png" alt="" />
-          </div>
-          <div class="teapot">
-            <img src="/Docs/assets/img/tea_pot_drop.png" alt="" />
-          </div>
-          <div class="bowl">
-            <img src="/Docs/assets/img/tea_bowl.png" alt="" />
-            <div class="bowlleaf">
-              <img class="leaf1" src="/Docs/assets/img/leaf_1.png" alt="" />
-              <img class="leaf2" src="/Docs/assets/img/leaf_2.png" alt="" />
-            </div>
-          </div>
-          <div class="fog">
-            <img class="fog_1" src="./assets/img/fog_1.png" alt="" />
-            <img class="fog_2" src="./assets/img/fog_2.png" alt="" />
-            <img class="fog_3" src="./assets/img/fog_3.png" alt="" />
-          </div>
-        </div>
-        <div class="idk">
-          <img src="/Docs/assets/img/idk.png" alt="" />
-          <p>
-            Don't know wich tea <br />
-            is right for you?
-          </p>
-        </div>
-        <div class="oldman">
-          <img src="/Docs/assets/img/asian_man.png" alt="" />
-          <p>
-            <span class="bold">Est. 1895</span>
-            <br />
-            Guided by the old way
-          </p>
-        </div>
-        <button class="shop-button">
-          SHOP NOW <span class="arrow">→</span>
-        </button>
-      </div>
     </header>
-    <main>
-      <div class="tea">
-        <div class="chenlu"></div>
-        <div class="baicha"></div>
-        <div class="luyin"></div>
-        <div class="longli"></div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <h1>Bienvenue dans notre boutique</h1>
+      <p>Des produits incroyables à prix cassés !</p>
+      <a href="#produits" class="cta-button">Voir les produits</a>
+    </section>
+
+    <!-- SECTION PRODUITS -->
+    <section class="produits" id="produits">
+      <h2>Nos produits</h2>
+      <div class="produit-liste">
+        <div class="produit">
+          <img src="https://via.placeholder.com/200" alt="Produit 1" />
+          <h3>Produit 1</h3>
+          <p>29,99 €</p>
+          <button>Ajouter au panier</button>
+        </div>
+        <div class="produit">
+          <img src="https://via.placeholder.com/200" alt="Produit 2" />
+          <h3>Produit 2</h3>
+          <p>39,99 €</p>
+          <button>Ajouter au panier</button>
+        </div>
+        <!-- Ajoute d'autres produits ici -->
       </div>
-    </main>
-    <script src="scripts/app.js"></script>
+    </section>
   </body>
 </html>

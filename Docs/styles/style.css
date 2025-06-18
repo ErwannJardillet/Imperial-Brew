@@ -396,3 +396,19 @@ nav .nav_links {
   top: 13w;
   left: 32vw;
 }
+
+
+/* main */
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tea div {
+  position: relative;
+  padding: 50px;
+  background-color: red;
+}

@@ -8,16 +8,17 @@
 body {
   font-family: sans-serif;
   line-height: 1.6;
+  background-color: #cad3d7;
 }
 
 /* NAVBAR */
 .navbar {
-  background-color: #33333339;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  z-index: 10;
 }
 
 .nav-links {
@@ -43,7 +44,7 @@ body {
   border-radius: 999px;
   display: flex;
   justify-content: space-around;
-    border : none;
+  border: none;
 }
 
 .nav-links .cart p {
@@ -54,7 +55,6 @@ body {
   color: black;
   text-align: center;
 }
-
 
 .nav-links a {
   color: white;
@@ -69,30 +69,41 @@ body {
   color: #ff470f;
 }
 
-.logo img{
+.logo img {
   width: 30%;
   height: 100%;
-
 }
-
-
 
 /* HERO SECTION */
 .hero {
-  background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+  background: url("https://via.placeholder.com/1200x400") no-repeat center
+    center/cover;
   color: white;
   text-align: center;
   padding: 5rem 2rem;
 }
 
-.cta-button {
-  background-color: #ff5722;
-  color: white;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
-  border-radius: 5px;
+.hero_txt {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  position: absolute;
+  font-size: clamp(2em, 10em, 20em);
+  top: 1.7em;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(1.5);
+  letter-spacing: clamp(-2px, -0.3vw, -8px);
+  white-space: nowrap;
+  color : black;
+}
+
+/* COMPONENT */
+
+.tea_pot_drop {
+  position: absolute;
+  top: 6em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(100px, 15em, 900px);
 }
 
 /* PRODUITS */
@@ -120,7 +131,7 @@ body {
 }
 
 /* Responsive Navbar */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -138,5 +149,19 @@ body {
     margin: 0.5rem 0;
     margin-left: 10px;
   }
-  
+
+  .nav-links .cart {
+    margin-left: 5em;
+  }
+  .nav-links {
+    padding-right: 2rem;
+  }
+  .hero_txt {
+    white-space: wrap;
+    line-height: 0.8;
+  font-size: 8em;
+  top: 1.2em;
+  z-index: -10;
+  color: #467e475f;
+  }
 }
